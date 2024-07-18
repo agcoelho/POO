@@ -1,7 +1,7 @@
 import core
 from core import login
 
-account = core.Acc(1, 'baby', 2500, 6000, 0)
+account = core.Acc(2, 'baby', 4000, 1200, 0)
 account2 = core.Acc(2, 'lice', 4000, 1200, 0)
 
 core.login()

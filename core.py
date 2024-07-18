@@ -43,7 +43,30 @@ class Acc:
                 self.__balance -= self.value
                 destination.__balance += self.value
                 print('congratulations! everything went well, your current balance is: {:.2f}'.format(self.__balance))
-            
+
+    def get_balance(self):
+        return self.__balance
+    
+    def get_limit(self):
+        return self.__limit
+
+    def get_name(self):
+        return self.__name
+    
+    def get_id(self):
+        return self.__id
+
+    def set_balance(self, balance):
+        self.__balance = balance
+
+    def set_name(self, name):
+        self.__name = name
+
+    def set_id(self, id):
+        self.__id = id
+
+    def set_limit(self, limit):
+        self.__limit = limit
 
 def login():
         print('####################################\n')
