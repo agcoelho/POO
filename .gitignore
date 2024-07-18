@@ -11,4 +11,9 @@ config/
 *.o
 *.class
 
+#ignorar o pycache
+
 __pycache__/
+
+#ignore o git
+.gitignore
