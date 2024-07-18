@@ -12,13 +12,16 @@ class Acc:
     def withdraw(self):
         self.value = float(input('How much do you wish do withdraw?\n'))
 
-        if self.__balance < self.value:
+        if self.__balance + self.__limit < self.value:
             print('not enough founds')
         else:
 
             self.__balance -= self.value
+            if self.__balance < 0:
+                self.__limit += self.__balance
+                self.__balance = 0
 
-        print('You still have ${:.2f} available'.format(self.__balance))
+        print('You still have ${:.2f} available in your account and {:.2f} in credit'.format(self.__balance, self.__limit))
 
     def deposit(self):
         self.value = float(input('how much do you wish to deposit?\n'))
@@ -32,7 +35,7 @@ class Acc:
         option = 0
         while option != 1:
             self.value = float(input('how much do you wish to transfer?\n'))
-            if self.value > self.__balance:
+            if self.value > self.__balance + self.__limit:
                 print('not enough founds')
             else:
 
