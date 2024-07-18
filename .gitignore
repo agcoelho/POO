@@ -1,0 +1,14 @@
+# Arquivos temporários
+*.tmp
+
+# Arquivos de log
+*.log
+
+# Diretório de configuração local
+config/
+
+# Arquivos de compilação
+*.o
+*.class
+
+
