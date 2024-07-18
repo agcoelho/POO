@@ -44,15 +44,19 @@ class Acc:
                 destination.__balance += self.value
                 print('congratulations! everything went well, your current balance is: {:.2f}'.format(self.__balance))
 
+    @property
     def get_balance(self):
         return self.__balance
     
+    @property
     def get_limit(self):
         return self.__limit
 
+    @property
     def get_name(self):
         return self.__name
     
+    @property
     def get_id(self):
         return self.__id
 
