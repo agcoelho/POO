@@ -1,5 +1,4 @@
 import core
-from core import login
 
 account = core.Acc(2, 'baby', 4000, 6000, 0)
 account2 = core.Acc(2, 'lice', 4000, 1200, 0)
@@ -25,6 +24,8 @@ while not opt:
     else:
         opt = True
         print('thank you for choosing us! see you soon...')
+
+print('o valor na conta agora é de: {:.2f}'.format(account2.get_balance))
         
 
 
