@@ -9,7 +9,7 @@ core.login()
 opt = False
 while not opt:
 
-    option = int(input('which operation do you choose?\n1-Trafer\n2-deposit\n3-withdraw\n4-see extract\n5-exit\n'))
+    option = int(input('which operation do you choose?\n1-Transfer\n2-Deposit\n3-Withdraw\n4-See extract\n5-Exit\n'))
 
     if option == 1:
         account.transfer(account2)
@@ -24,7 +24,7 @@ while not opt:
 
     else:
         opt = True
-        print('thankyou for choosing us! see you soon')
+        print('thank you for choosing us! see you soon...')
         
 
 

@@ -12,7 +12,11 @@ class Acc:
     def withdraw(self):
         self.value = float(input('How much do you wish do withdraw?\n'))
 
-        self.__balance -= self.value
+        if self.__balance < self.value:
+            print('not enough founds')
+        else:
+
+            self.__balance -= self.value
 
         print('You still have ${:.2f} available'.format(self.__balance))
 
@@ -28,8 +32,11 @@ class Acc:
         option = 0
         while option != 1:
             self.value = float(input('how much do you wish to transfer?\n'))
+            if self.value > self.__balance:
+                print('not enough founds')
+            else:
 
-            print('transfer {:.2f} to {}'.format(self.value, destination))
+                print('transfer {:.2f} to {}'.format(self.value, destination))
 
             option = int(input('Is everything correct?\n1-YES\n2-NO\n'))
             if option == 1:
@@ -62,5 +69,5 @@ def login():
                     print('wellcome lice!!!\n')
                     validation = True
             else:
-                print('invalid username or password, pls try again')
+                print('invalid username, pls try again')
         
