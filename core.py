@@ -22,14 +22,6 @@ class Acc:
         self.__balance += self.value
 
         print('you now have {:.2f} available in your account'.format(self.__balance))
-
-    def withdraw2(self):
-        self.balance -= self.value
-        
-
-    def deposit2(self):
-        self.__balance += self.value
-
         
 
     def transfer(self, destination):
@@ -45,5 +37,30 @@ class Acc:
                 destination.__balance += self.value
                 print('congratulations! everything went well, your current balance is: {:.2f}'.format(self.__balance))
             
-            
-                                
+
+def login():
+        print('####################################\n')
+        print("     WELLCOME TO BABY'S BANK          ")
+        print('####################################\n')
+
+        user = '0'
+        validation = False
+        while not validation:
+            user = input('type your username\n')
+            if user == 'baby':
+                pswd = input('type your password, baby\n')
+                if pswd != '1234':
+                    print('invalid password, baby\n')
+                else: 
+                    print('wellcome baby!!!\n')
+                    validation = True
+            elif user == 'lice':
+                pswd = input('type your password, lice\n')
+                if pswd != '4321':
+                    print('invalid password\n')
+                else: 
+                    print('wellcome lice!!!\n')
+                    validation = True
+            else:
+                print('invalid username or password, pls try again')
+        
