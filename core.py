@@ -45,7 +45,10 @@ class Acc:
             if option == 1:
                 self.__balance -= self.value
                 destination.__balance += self.value
-                print('congratulations! everything went well, your current balance is: {:.2f}'.format(self.__balance))
+            if self.__balance < 0:
+                self.__limit += self.__balance
+                self.__balance = 0
+                print('congratulations! everything went well, your current balance is: ${:.2f} and your credt is: ${:.2f}'.format(self.__balance, self.__limit))
 
     @property
     def get_balance(self):
@@ -72,7 +75,7 @@ class Acc:
 
 def login():
         print('####################################\n')
-        print("     WELLCOME TO BABY'S BANK          ")
+        print("     WELLCOME TO BABY'S BANK          \n")
         print('####################################\n')
 
         user = '0'

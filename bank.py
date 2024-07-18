@@ -25,6 +25,8 @@ while not opt:
     else:
         opt = True
         print('thank you for choosing us! see you soon...')
+
+print('o valor na conta agora é de: {:.2f}'.format(account2.get_balance))
         
 
 
